@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    padding-top: 3.5rem;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+from,
+label,
+input {
+    padding: 10px;
+}
+
+a {
+    color: blue;
+}
+
+a:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.small-jumbo {
+    padding: 10px 0px 0px 0px;
+    height: 57px;
+}
+
+.subtitle-ind {
+    font-weight: 300;
+}
+
+label {
+    padding: inherit;
+    margin-bottom: inherit;
+}
+
+.mbtn-submit {
+    margin-top: 10px;
+    float: right;
+}
+
+.mbg-column {
+    background-color: #f6f6f6;
+}
+
+.option-column {
+    width: 50px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #005c91 !important;
+    border-color: #005c91 !important;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-danger {
+    background-color: #b90000 !important;
+    border-color: #b90000 !important;
+}

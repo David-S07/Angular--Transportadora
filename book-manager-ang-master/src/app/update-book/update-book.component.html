@@ -1,0 +1,21 @@
+<a routerLink="/"><input type="submit" class="btn btn-light" value="< Back"></a>
+
+<h3>
+    Update Book
+</h3>
+
+<p *ngIf="!exist">
+    Book doesn't exist
+</p>
+
+<form id="formNewBook" name="formNewBook" #bookData="ngForm" (ngSubmit)="updateBook(bookData.value)" *ngIf="exist">
+    <label>Name: </label>
+    <input type="text" name="name" id="name" placeholder="Name" class="form-control" [(ngModel)]="data.name" ngModel>
+    <label>Author: </label>
+    <input type="text" name="author" id="author" placeholder="Author" class="form-control" [(ngModel)]="data.author" ngModel>
+    <label>Publisher: </label>
+    <input type="text" name="publisher" id="publisher" placeholder="Publisher" class="form-control" [(ngModel)]="data.publisher" ngModel>
+    <input type="submit" value="Update Book" class="btn btn-primary mbtn-submit">
+</form>
+
+<a routerLink="/"><input type="submit" class="btn btn-light" value="< Back"></a>

@@ -1,0 +1,34 @@
+<h3 *ngIf="rastreios.length > 0">
+    Rastreios
+</h3>
+
+<input [(ngModel)]="filtradoString" (ngModelChange)="onFilterChange()" />
+
+<div class="table-responsive">
+
+    <table class="table" *ngIf="rastreios.length > 0">
+            <th class="mbg-column">Id</th>
+            <th class="mbg-column">Nome</th>
+            <th class="mbg-column">Transportadora</th>
+            <th class="mbg-column">Código rastreio</th>
+            <th class="mbg-column">Status</th>
+            <th class="mbg-column option-column">Apagar</th>
+            <th class="mbg-column option-column">Editar</th>
+            <tr *ngFor="let row of filtrado">
+            <td>{{row.id}}</td>
+            <td>{{row.nome}}</td>
+            <td>{{row.classTransporte}}</td>
+            <td>{{row.codigoRastreio}}</td>
+            <td>{{row.status}}</td>
+            <td (click)="deleteBook(row)">
+                <a><input type="submit" value="Apagar" class="btn btn-danger"></a>
+            </td>
+            <td [routerLink]="['/updateBook', row.id]">
+                <a><input type="submit" value="Editar" class="btn btn-primary"></a>
+            </td>
+       </tr>
+    </table>
+</div>
+<p *ngIf="!rastreios.length > 0">Sem rastreios : /</p>
+<a routerLink='/book'><input type="submit" class="btn btn-primary" value="Cadastrar rastreio"></a>
+<a routerLink='/cliente'><input type="submit" class="btn btn-primary" value="Area do cliente"></a>

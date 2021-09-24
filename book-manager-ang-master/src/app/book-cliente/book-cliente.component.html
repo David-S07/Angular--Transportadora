@@ -1,0 +1,24 @@
+<h3 *ngIf="rastreios.length > 0">
+    Rastreios
+</h3>
+
+<input [(ngModel)]="filtradoString" (ngModelChange)="onFilterChange()" />
+
+<div class="table-responsive">
+
+    <table class="table" *ngIf="rastreios.length > 0">
+            <th class="mbg-column">Id</th>
+            <th class="mbg-column">Nome</th>
+            <th class="mbg-column">Transportadora</th>
+            <th class="mbg-column">Código rastreio</th>
+            <th class="mbg-column">Status</th>
+            <tr *ngFor="let row of filtrado">
+            <td>{{row.id}}</td>
+            <td>{{row.nome}}</td>
+            <td>{{row.classTransporte}}</td>
+            <td>{{row.codigoRastreio}}</td>
+            <td>{{row.status}}</td>
+       </tr>
+    </table>
+</div>
+<p *ngIf="!rastreios.length > 0">Sem rastreios : /</p>

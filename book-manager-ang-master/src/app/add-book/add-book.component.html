@@ -1,0 +1,22 @@
+<a routerLink="/"><input type="submit" class="btn btn-light" value="< voltar"></a>
+
+<h3>
+    Cadastrar rastreio
+</h3>
+
+<form id="formNewBook" name="formNewBook" #bookData="ngForm" (ngSubmit)="addBook(bookData.value)">
+    <label>Transportadora: </label>
+    <input type="text" name="transportadora" id="transportadora" placeholder="Transportadora" class="form-control" ngModel>
+    <label>Cliente: </label>
+    <input type="text" name="cliente" id="cliente" placeholder="Cliente" class="form-control" ngModel>
+    <label>Código de rastreio: </label>
+    <input type="text" name="codigodeRastreio" id="codigodeRastreio" placeholder="Código de rastreio" class="form-control" ngModel>
+    <label>Status: </label>
+    <input type="text" name="status" id="status" placeholder="status" class="form-control" ngModel>
+    <input type="submit" value="Add rastreio" class="btn btn-primary mbtn-submit">
+</form>
+
+<br>
+<h3 *ngIf="isAdded">{{confirmationString}}</h3>
+
+<a routerLink="/"><input type="submit" class="btn btn-light" value="< voltar"></a>
